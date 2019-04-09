@@ -1,0 +1,12 @@
+{
+  "name": "experiments.peerpad.net",
+  "version": "1.0.0",
+  "description": "Landing page for experiments",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build; cp -av static build"
+  },
+  "keywords": [],
+  "author": "Jim Pick (@jimpick)",
+  "license": "MIT"
+}
