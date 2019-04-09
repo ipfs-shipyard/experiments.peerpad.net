@@ -2,7 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.15.1
+      - image: circleci/node:10.15.1-browsers
+        environment:
+          NO_SANDBOX: true
     steps:
       - checkout
       - run:
@@ -16,7 +18,7 @@ jobs:
 
   deploy:
     docker:
-      - image: olizilla/ipfs-dns-deploy:1.1
+      - image: olizilla/ipfs-dns-deploy:latest
         environment:
           DOMAIN: peerpad.net
           SUBDOMAIN: experiments
